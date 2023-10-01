@@ -7,25 +7,23 @@
 #' @param ... PARAM_DESCRIPTION
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @examples 
+#' @examples
 #' \dontrun{
 #' if(interactive()){
 #'  #EXAMPLE1
 #'  }
 #' }
-#' @seealso 
+#' @seealso
 #'  \code{\link[dplyr]{select}}, \code{\link[dplyr]{reexports}}, \code{\link[dplyr]{nth}}, \code{\link[dplyr]{pull}}, \code{\link[dplyr]{mutate}}, \code{\link[dplyr]{bind_rows}}, \code{\link[dplyr]{mutate-joins}}, \code{\link[dplyr]{join_by}}
 #'  \code{\link[lubridate]{year}}, \code{\link[lubridate]{ymd}}
 #'  \code{\link[tidycensus]{get_estimates}}
-#'  \code{\link[stats]{filter}}
 #'  \code{\link[tidyr]{pivot_wider}}
 #' @rdname ojo_add_population
-#' @export 
+#' @export
 #' @author Anthony Flores
-#' @importFrom dplyr select starts_with nth pull tibble mutate bind_rows left_join join_by
+#' @importFrom dplyr select filter starts_with nth pull tibble mutate bind_rows left_join join_by
 #' @importFrom lubridate year ymd
 #' @importFrom tidycensus get_estimates
-#' @importFrom stats filter
 #' @importFrom tidyr pivot_wider
 ojo_add_population <- function(data,
                                geography = c("both", "county", "state"),
@@ -70,17 +68,17 @@ ojo_add_population <- function(data,
     #     time_series = TRUE,
     #     state = "OK"
     #   ) |>
-    #   filter(
+    #   dplyr::filter(
     #     variable == "POP",
     #     !(DATE %in% c(1, 12)) # Excludes years 2010, and 2020 (https://www.census.gov/data/developers/data-sets/popest-popproj/popest/popest-vars/2019.html)
     #   ) |>
-    #   mutate(
+    #   dplyr::mutate(
     #     year = 2000 + (DATE - 2),
     #     variable = "POPESTIMATE"
     #   )
     #
     # population_data <- population_data |>
-    #   bind_rows(population_2000s)
+    #   dplyr::bind_rows(population_2000s)
     # }
 
     if (any(years %in% 2010:2019)) {
@@ -91,7 +89,7 @@ ojo_add_population <- function(data,
         time_series = TRUE,
         state = "OK"
       ) |>
-        stats::filter(
+        dplyr::filter(
           variable == "POP",
           !(DATE %in% c(1, 12))
         ) |>
@@ -111,7 +109,7 @@ ojo_add_population <- function(data,
         time_series = TRUE,
         state = "OK"
       ) |>
-        stats::filter(variable == "POPESTIMATE")
+        dplyr::filter(variable == "POPESTIMATE")
 
       population_data <- population_data |>
         dplyr::bind_rows(population_2020s)

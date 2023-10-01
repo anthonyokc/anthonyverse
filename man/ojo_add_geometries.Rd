@@ -32,7 +32,6 @@ if(interactive()){
 \seealso{
 \code{\link[tigris]{counties}}, \code{\link[tigris]{states}}
 \code{\link[dplyr]{select}}, \code{\link[dplyr]{mutate-joins}}, \code{\link[dplyr]{cross_join}}
-\code{\link[stats]{filter}}
 }
 \author{
 Anthony Flores

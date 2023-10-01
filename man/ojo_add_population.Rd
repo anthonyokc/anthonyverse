@@ -43,7 +43,6 @@ if(interactive()){
 \code{\link[dplyr]{select}}, \code{\link[dplyr]{reexports}}, \code{\link[dplyr]{nth}}, \code{\link[dplyr]{pull}}, \code{\link[dplyr]{mutate}}, \code{\link[dplyr]{bind_rows}}, \code{\link[dplyr]{mutate-joins}}, \code{\link[dplyr]{join_by}}
 \code{\link[lubridate]{year}}, \code{\link[lubridate]{ymd}}
 \code{\link[tidycensus]{get_estimates}}
-\code{\link[stats]{filter}}
 \code{\link[tidyr]{pivot_wider}}
 }
 \author{
