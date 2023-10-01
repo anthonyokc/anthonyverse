@@ -8,13 +8,13 @@
 #' @param map_color_stops PARAM_DESCRIPTION, Default: rev(viridis::magma(n = 3))
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @examples 
+#' @examples
 #' \dontrun{
 #' if(interactive()){
 #'  #EXAMPLE1
 #'  }
 #' }
-#' @seealso 
+#' @seealso
 #'  \code{\link[viridis]{reexports}}
 #'  \code{\link[rlang]{enquo}}, \code{\link[rlang]{as_label}}
 #'  \code{\link[dplyr]{select}}, \code{\link[dplyr]{pull}}, \code{\link[dplyr]{reexports}}
@@ -25,7 +25,7 @@
 #'  \code{\link[graphics]{hist}}
 #'  \code{\link[highcharter]{color_classes}}, \code{\link[highcharter]{color_stops}}, \code{\link[highcharter]{highchart}}, \code{\link[highcharter]{hc_add_series_map}}, \code{\link[highcharter]{hc_caption}}, \code{\link[highcharter]{hc_colorAxis}}, \code{\link[highcharter]{hc_legend}}, \code{\link[highcharter]{hc_mapNavigation}}, \code{\link[highcharter]{hc_add_theme}}
 #' @rdname ojo_highchart_map
-#' @export 
+#' @export
 #' @author Anthony Flores
 #' @importFrom viridis magma
 #' @importFrom rlang enquo as_label
@@ -151,7 +151,7 @@ ojo_highchart_map <- function(data,
         align = "right"
       )
     ) |>
-    highcharter::hc_add_theme(hc_theme_ojo)
+    highcharter::hc_add_theme(hc_theme_ojo())
 
   return(hc)
 }
