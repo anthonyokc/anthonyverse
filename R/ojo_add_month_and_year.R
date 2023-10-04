@@ -1,25 +1,22 @@
-library(dplyr)
-library(lubridate)
-library(purrr)
 #' @title FUNCTION_TITLE
 #' @description FUNCTION_DESCRIPTION
 #' @param data PARAM_DESCRIPTION
 #' @param ... PARAM_DESCRIPTION
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @examples 
+#' @examples
 #' \dontrun{
 #' if(interactive()){
 #'  #EXAMPLE1
 #'  }
 #' }
-#' @seealso 
+#' @seealso
 #'  \code{\link[rlang]{defusing-advanced}}, \code{\link[rlang]{quo_label}}, \code{\link[rlang]{sym}}
 #'  \code{\link[purrr]{map}}
 #'  \code{\link[dplyr]{mutate}}
 #'  \code{\link[lubridate]{round_date}}
 #' @rdname ojo_add_month_and_year
-#' @export 
+#' @export
 #' @author Anthony Flores
 #' @importFrom rlang quos quo_text sym
 #' @importFrom purrr map_chr
