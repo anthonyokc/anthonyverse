@@ -1,3 +1,21 @@
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
+#' @param data PARAM_DESCRIPTION
+#' @param column PARAM_DESCRIPTION
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @seealso
+#'  \code{\link[dplyr]{filter}}, \code{\link[dplyr]{nth}}, \code{\link[dplyr]{pull}}
+#' @rdname report_percent_missing
+#' @export
+#' @author Anthony Flores
+#' @importFrom dplyr filter nth pull
 report_percent_missing <- function(data, column) {
   na_data <- data |>
     tably({{column}}) |>

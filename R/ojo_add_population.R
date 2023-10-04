@@ -33,6 +33,7 @@ ojo_add_population <- function(data,
   "Adds population data from the Census Population Estimate Program."
 
   # TODO: Add option for population density
+  # TODO: Include a data source we host for when Census is down (maintenance, gov't shutdowns, etc.)
 
   ## Variable Handling
   # By default geography gets both the county and state
