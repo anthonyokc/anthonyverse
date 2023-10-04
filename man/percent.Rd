@@ -4,7 +4,14 @@
 \alias{percent}
 \title{FUNCTION_TITLE}
 \usage{
-percent(x, digits = 0, abs = FALSE, drop0trailing = FALSE)
+percent(
+  x,
+  digits = 0,
+  abs = FALSE,
+  drop0trailing = FALSE,
+  multiply_by_100 = TRUE,
+  ...
+)
 }
 \arguments{
 \item{x}{PARAM_DESCRIPTION}

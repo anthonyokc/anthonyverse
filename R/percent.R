@@ -21,15 +21,17 @@
 percent <- function(x,
                     digits = 0,
                     abs = FALSE,
-                    drop0trailing = FALSE
+                    drop0trailing = FALSE,
+                    multiply_by_100 = TRUE,
+                    ...
                     ) {
 
   .drop0trailing <- drop0trailing
   .digits <- digits
-  if (abs) {
-    x <- abs(x)
-  }
-  x <- 100 * x
+
+  if (abs) { x <- abs(x) }
+  if (multiply_by_100) { x <- 100 * x }
+
   x <- janitor::round_half_up(x, digits = .digits)
   x <-
     formatC(
