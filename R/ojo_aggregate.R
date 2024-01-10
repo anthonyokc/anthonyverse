@@ -8,18 +8,18 @@
 #' @param rate_suffix PARAM_DESCRIPTION, Default: '1k'
 #' @return OUTPUT_DESCRIPTION
 #' @details DETAILS
-#' @examples 
+#' @examples
 #' \dontrun{
 #' if(interactive()){
 #'  #EXAMPLE1
 #'  }
 #' }
-#' @seealso 
+#' @seealso
 #'  \code{\link[rlang]{enquo}}, \code{\link[rlang]{quosure-tools}}, \code{\link[rlang]{as_label}}
 #'  \code{\link[purrr]{map}}
 #'  \code{\link[dplyr]{if_else}}, \code{\link[dplyr]{distinct}}, \code{\link[dplyr]{count}}, \code{\link[dplyr]{mutate}}, \code{\link[dplyr]{arrange}}
 #' @rdname ojo_aggregate
-#' @export 
+#' @export
 #' @author Anthony Flores
 #' @importFrom rlang enquos quo_get_expr as_label
 #' @importFrom purrr map_chr
@@ -55,7 +55,7 @@ ojo_aggregate <- function(data,
   )
 
   data <- data |>
-    dplyr::distinct(id, .keep_all = TRUE)
+    slice_tail(n = 1, by = id)
 
   if (any(is.na(variable_name))) {
     variable_name <- ""
