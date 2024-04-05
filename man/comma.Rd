@@ -2,39 +2,50 @@
 % Please edit documentation in R/comma.R
 \name{comma}
 \alias{comma}
-\title{FUNCTION_TITLE}
+\title{Convert a numeric value to a formatted string with commas}
 \usage{
-comma(x, digits = 0, abs = FALSE, round_to_zero = FALSE, drop0trailing = FALSE)
+comma(
+  x,
+  digits = 0,
+  abs = FALSE,
+  round_to_zero = FALSE,
+  drop_trailing_zeros = FALSE,
+  ...
+)
 }
 \arguments{
-\item{x}{PARAM_DESCRIPTION}
+\item{x}{A numeric value to be converted to a formatted string with commas}
 
-\item{digits}{PARAM_DESCRIPTION, Default: 0}
+\item{digits}{Number of decimal places to round to, Default:}
 
-\item{abs}{PARAM_DESCRIPTION, Default: FALSE}
+\item{abs}{Take the absolute value of x before converting to a formatted string with commas, Default: FALSE}
 
-\item{round_to_zero}{PARAM_DESCRIPTION, Default: FALSE}
+\item{round_to_zero}{Ensures no number every rounds to zero. For example, 0.4 will always be displayed as 0.4 and not be rounded to zero, but 1.4 will still round to 1. Default: FALSE}
 
-\item{drop0trailing}{PARAM_DESCRIPTION, Default: FALSE}
+\item{drop_trailing_zeros}{Drop trailing zeros after the decimal point, Default: FALSE}
 }
 \value{
-OUTPUT_DESCRIPTION
+A formatted string with commas
 }
 \description{
-FUNCTION_DESCRIPTION
+User inputs a numeric value and function converts it to a formatted string with commas.
 }
 \details{
-DETAILS
+The function uses the \code{round_half_up} function from the janitor package to round the number to the specified number of decimal places. The \code{formatC} function is then used to format the number as a string with commas and the specified number of decimal places and trailing zeros.
 }
 \examples{
-\dontrun{
-if(interactive()){
- #EXAMPLE1
- }
-}
+x <- 1234567.89
+x
+comma(x)
+comma(x, digits = 3)
+comma(x, digits = 3, drop_trailing_zeros = TRUE)
+y <- 0.4
+comma(y)
+comma(y, round_to_zero = TRUE)
 }
 \seealso{
 \code{\link[janitor]{round_half_up}}
+\code{\link[base]{formatC}}
 }
 \author{
 Anthony Flores

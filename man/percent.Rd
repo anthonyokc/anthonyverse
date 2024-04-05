@@ -2,44 +2,49 @@
 % Please edit documentation in R/percent.R
 \name{percent}
 \alias{percent}
-\title{FUNCTION_TITLE}
+\title{Convert a decimal to a percentage as a formatted string}
 \usage{
 percent(
   x,
   digits = 0,
   abs = FALSE,
-  drop0trailing = FALSE,
+  drop_trailing_zeros = FALSE,
   multiply_by_100 = TRUE,
   ...
 )
 }
 \arguments{
-\item{x}{PARAM_DESCRIPTION}
+\item{x}{A numeric value to be converted to a percentage}
 
-\item{digits}{PARAM_DESCRIPTION, Default: 0}
+\item{digits}{Number of decimal places to round to, Default: 0}
 
-\item{abs}{PARAM_DESCRIPTION, Default: FALSE}
+\item{abs}{Take the absolute value of x before converting to a percentage, Default: FALSE}
 
-\item{drop0trailing}{PARAM_DESCRIPTION, Default: FALSE}
+\item{drop_trailing_zeros}{Drop trailing zeros after the decimal point, Default: FALSE}
+
+\item{multiply_by_100}{Multiply x by 100 before converting to a percentage, Default: TRUE}
+
+\item{...}{Additional arguments to be passed to the \code{formatC} function}
 }
 \value{
-OUTPUT_DESCRIPTION
+A formatted string representing the percentage
 }
 \description{
-FUNCTION_DESCRIPTION
+User inputs a decimal number and functions converts it to a percentage as a formatted string.
 }
 \details{
-DETAILS
+The function uses the \code{round_half_up} function from the janitor package to round the number to the specified number of decimal places. The \code{formatC} function is then used to format the number as a percentage with the specified number of decimal places and trailing zeros.
 }
 \examples{
-\dontrun{
-if(interactive()){
- #EXAMPLE1
- }
-}
+x <- 0.1235
+x
+percent(x)
+percent(x, digits = 3)
+percent(x, digits = 3, drop_trailing_zeros = FALSE)
 }
 \seealso{
 \code{\link[janitor]{round_half_up}}
+\code{\link[base]{formatC}}
 }
 \author{
 Anthony Flores
