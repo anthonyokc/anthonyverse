@@ -35,10 +35,10 @@ Imports:
     viridis
 Suggests:
   knitr,
+  desc,
   testthat (>= 2.0),
   pkgndep
 VignetteBuilder: knitr
-biocViews:
 Encoding: UTF-8
 Language: en-US
 LazyData: true
