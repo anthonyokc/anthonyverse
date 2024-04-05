@@ -1,37 +1,38 @@
 Type: Package
 Package: anthonyverse
-Title: R Package Template
+Title: Various Helper Functions for Data Analysis
 Version: 0.1.0
 Date: 2023-07-05
 Authors@R: person("anthonyokc", , , "anthonyokc@example.com", role = c("aut", "cre"))
-Description: R package template with GitHub Actions workflows included.
+Description: A collection of functions that I use for data analysis. This package is a work in progress and will be updated frequently.
 License: MIT + file LICENSE
 URL: https://github.com/anthonyokc/anthonyverse/
 BugReports: https://github.com/anthonyokc/anthonyverse/issues
 Depends: R (>= 4.3.1)
 Imports:
-  dplyr,
-  geojsonsf,
-  ggplot2,
-  graphics,
-  grDevices,
-  highcharter,
-  htmltools,
-  htmlwidgets,
-  janitor,
-  jsonlite,
-  lubridate,
-  ojodb,
-  purrr,
-  rlang,
-  scales,
-  snakecase,
-  stats,
-  stringr,
-  tidycensus,
-  tidyr,
-  tigris,
-  viridis
+    dplyr,
+    geojsonsf,
+    ggplot2,
+    graphics,
+    grDevices,
+    highcharter,
+    htmltools,
+    htmlwidgets,
+    janitor,
+    jsonlite,
+    lifecycle,
+    lubridate,
+    ojodb,
+    purrr,
+    rlang,
+    scales,
+    snakecase,
+    stats,
+    stringr,
+    tidycensus,
+    tidyr,
+    tigris,
+    viridis
 Suggests:
   knitr,
   testthat (>= 2.0),

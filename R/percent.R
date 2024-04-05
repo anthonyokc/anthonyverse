@@ -1,5 +1,6 @@
 #' @title Convert a decimal to a percentage as a formatted string
-#' @description User inputs a decimal number and functions converts it to a percentage as a formatted string.
+#' @description
+#' User inputs a decimal number and functions converts it to a percentage as a formatted string.
 #' @param x A numeric value to be converted to a percentage
 #' @param digits Number of decimal places to round to, Default: 0
 #' @param abs Take the absolute value of x before converting to a percentage, Default: FALSE
