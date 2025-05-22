@@ -38,6 +38,8 @@ Suggests:
   desc,
   testthat (>= 2.0),
   pkgndep
+Remotes:
+	github::openjusticeok/ojodb
 VignetteBuilder: knitr
 Encoding: UTF-8
 Language: en-US
